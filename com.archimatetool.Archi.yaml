@@ -33,6 +33,7 @@ modules:
       - chmod +x /app/archi/Archi
       
       # Create wrapper script
+      - install -d /app/bin
       - |
         cat > /app/bin/Archi << 'EOF'
         #!/bin/sh
