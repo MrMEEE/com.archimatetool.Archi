@@ -25,9 +25,6 @@ modules:
   - name: archi
     buildsystem: simple
     build-commands:
-      # Extract archive
-      - tar -xzf Archi-Linux64-5.8.0.tgz
-      
       # Install to /app
       - install -d /app/archi
       - cp -r Archi/* /app/archi/
