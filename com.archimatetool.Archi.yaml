@@ -27,7 +27,7 @@ modules:
     build-commands:
       # Install to /app
       - install -d /app/archi
-      - cp -r Archi/* /app/archi/
+      - cp -r * /app/archi/
       
       # Make executable
       - chmod +x /app/archi/Archi
@@ -41,13 +41,13 @@ modules:
       - chmod +x /app/bin/Archi
       
       # Install desktop file
-      - install -Dm644 com.archimatetool.Archi.desktop /app/share/applications/com.archimatetool.Archi.desktop
+      - install -Dm644 /app/archi/com.archimatetool.Archi.desktop /app/share/applications/com.archimatetool.Archi.desktop
       
-      # Install icon (convert XPM to PNG if needed, or use the XPM directly)
-      - install -Dm644 Archi/icon.xpm /app/share/icons/hicolor/48x48/apps/com.archimatetool.Archi.xpm
+      # Install icon
+      - install -Dm644 /app/archi/icon.xpm /app/share/icons/hicolor/48x48/apps/com.archimatetool.Archi.xpm
       
       # Install AppStream metadata
-      - install -Dm644 com.archimatetool.Archi.metainfo.xml /app/share/metainfo/com.archimatetool.Archi.metainfo.xml
+      - install -Dm644 /app/archi/com.archimatetool.Archi.metainfo.xml /app/share/metainfo/com.archimatetool.Archi.metainfo.xml
     
     sources:
       - type: archive
