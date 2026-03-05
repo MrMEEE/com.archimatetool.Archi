@@ -48,8 +48,8 @@ modules:
       # Install desktop file
       - install -Dm644 /app/archi/com.archimatetool.Archi.desktop /app/share/applications/com.archimatetool.Archi.desktop
       
-      # Install icon
-      - install -Dm644 /app/archi/icon.xpm /app/share/icons/hicolor/48x48/apps/com.archimatetool.Archi.xpm
+      # Install icon - flatpak-builder will handle icon validation
+      - install -Dm644 /app/archi/icon.xpm /app/share/icons/hicolor/48x48/apps/com.archimatetool.Archi.png
       
       # Install AppStream metadata
       - install -Dm644 /app/archi/com.archimatetool.Archi.metainfo.xml /app/share/metainfo/com.archimatetool.Archi.metainfo.xml
