@@ -4,6 +4,10 @@ runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: Archi
 
+build-options:
+  no-debuginfo: true
+  strip: false
+
 finish-args:
   # X11 + XShm access
   - --socket=x11
