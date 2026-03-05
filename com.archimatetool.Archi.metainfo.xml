@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.archimatetool.Archi</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Archi</name>
+  <summary>Open source ArchiMate modeling tool</summary>
+  
+  <description>
+    <p>
+      Archi is an open source modeling tool for creating ArchiMate models and sketches.
+      ArchiMate® is an open and independent modeling language for Enterprise Architecture
+      that is supported by different tool vendors and consulting firms.
+    </p>
+    <p>
+      Key features:
+    </p>
+    <ul>
+      <li>Full support for ArchiMate 3.2 specification</li>
+      <li>Easy to use visual modeling with drag and drop</li>
+      <li>Multiple views and viewpoints</li>
+      <li>Model relationship management</li>
+      <li>Import/Export to various formats</li>
+      <li>Collaboration features with coArchi plugin</li>
+      <li>HTML report generation</li>
+      <li>Cross-platform support</li>
+    </ul>
+  </description>
+  
+  <launchable type="desktop-id">com.archimatetool.Archi.desktop</launchable>
+  
+  <url type="homepage">https://www.archimatetool.com/</url>
+  <url type="bugtracker">https://github.com/archimatetool/archi/issues</url>
+  <url type="help">https://www.archimatetool.com/help/</url>
+  <url type="donation">https://www.archimatetool.com/donate/</url>
+  
+  <screenshots>
+    <screenshot type="default">
+      <caption>Archi main window with ArchiMate model</caption>
+      <image>https://www.archimatetool.com/wp-content/uploads/2018/07/archi-screenshot.png</image>
+    </screenshot>
+  </screenshots>
+  
+  <categories>
+    <category>Office</category>
+    <category>Graphics</category>
+    <category>Development</category>
+  </categories>
+  
+  <content_rating type="oars-1.1" />
+  
+  <releases>
+    <release version="5.8.0" date="2026-02-18">
+      <description>
+        <p>Latest release with ArchiMate 3.2 support</p>
+      </description>
+    </release>
+  </releases>
+  
+  <provides>
+    <binary>Archi</binary>
+  </provides>
+  
+  <developer_name>Archi Team</developer_name>
+</component>

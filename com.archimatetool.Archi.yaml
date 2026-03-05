@@ -1,0 +1,65 @@
+app-id: com.archimatetool.Archi
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: Archi
+
+finish-args:
+  # X11 + XShm access
+  - --socket=x11
+  - --share=ipc
+  # Wayland access
+  - --socket=wayland
+  # OpenGL access
+  - --device=dri
+  # Network access for collaboration features
+  - --share=network
+  # Access to home directory for project files
+  - --filesystem=home
+  # Allow access to common project locations
+  - --filesystem=xdg-documents
+  # D-Bus access
+  - --socket=session-bus
+
+modules:
+  - name: archi
+    buildsystem: simple
+    build-commands:
+      # Extract archive
+      - tar -xzf Archi-Linux64-5.8.0.tgz
+      
+      # Install to /app
+      - install -d /app/archi
+      - cp -r Archi/* /app/archi/
+      
+      # Make executable
+      - chmod +x /app/archi/Archi
+      
+      # Create wrapper script
+      - |
+        cat > /app/bin/Archi << 'EOF'
+        #!/bin/sh
+        exec /app/archi/Archi "$@"
+        EOF
+      - chmod +x /app/bin/Archi
+      
+      # Install desktop file
+      - install -Dm644 com.archimatetool.Archi.desktop /app/share/applications/com.archimatetool.Archi.desktop
+      
+      # Install icon (convert XPM to PNG if needed, or use the XPM directly)
+      - install -Dm644 Archi/icon.xpm /app/share/icons/hicolor/48x48/apps/com.archimatetool.Archi.xpm
+      
+      # Install AppStream metadata
+      - install -Dm644 com.archimatetool.Archi.metainfo.xml /app/share/metainfo/com.archimatetool.Archi.metainfo.xml
+    
+    sources:
+      - type: archive
+        url: https://www.archimatetool.com/downloads/archi/5.8.0/Archi-Linux64-5.8.0.tgz
+        sha256: 21915865185bcb7a23068997dee52ecc34bcc105437e2f978ccd76473fe2c9e7
+        dest: .
+      
+      - type: file
+        path: com.archimatetool.Archi.desktop
+      
+      - type: file
+        path: com.archimatetool.Archi.metainfo.xml

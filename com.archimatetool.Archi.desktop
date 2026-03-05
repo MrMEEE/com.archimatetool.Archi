@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Archi
+GenericName=ArchiMate Modeling Tool
+Comment=Open source ArchiMate modelling tool to create ArchiMate models and sketches
+Icon=com.archimatetool.Archi
+Exec=Archi %F
+Terminal=false
+Categories=Office;Graphics;Development;
+MimeType=application/x-archimate-model;
+Keywords=archimate;architecture;modeling;enterprise;
+StartupWMClass=Archi
+StartupNotify=true
