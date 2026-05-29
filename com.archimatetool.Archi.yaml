@@ -56,8 +56,9 @@ modules:
     
     sources:
       - type: archive
-        url: https://github.com/archimatetool/archi/archive/refs/tags/release_5.9.0.zip
-        sha256: 20bc433c3f3f75b754aceef250dee17f7636e28f537ce0500baf462641498ec6
+        url: https://www.archimatetool.com/downloads/archi/5.9.0/Archi-Linux64-5.9.0.tgz
+        sha256: d3fdff119c39ba907476fca14b4b1f2aaa7b0b8b5ceaf1835be3bd594e624dcf
+        strip-components: 1
         dest: .
       
       - type: file
