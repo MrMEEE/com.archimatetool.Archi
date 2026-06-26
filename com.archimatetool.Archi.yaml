@@ -56,7 +56,7 @@ modules:
     
     sources:
       - type: archive
-        url: https://www.archimatetool.com/downloads/archi/5.9.0/Archi-Linux64-5.9.0.tgz
+        url: https://github.com/archimatetool/archi.io/releases/download/5.9.0/Archi-Linux64-5.9.0.tgz
         sha256: d3fdff119c39ba907476fca14b4b1f2aaa7b0b8b5ceaf1835be3bd594e624dcf
         strip-components: 1
         dest: .
